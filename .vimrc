@@ -37,7 +37,15 @@ filetype plugin indent on
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
-set laststatus=2
-set nu
 let g:airline_powerline_fonts=1
 let g:airline_theme='term'
+colorscheme termorrow
+syntax on
+set ts=8 sts=4 sw=4 noet noci ai si cino=(0,u0,U0
+set nu
+" Highlight trailing whitespace if you don't use list mode:
+highlight ExtraWhite ctermbg=darkred guibg=lightred
+autocmd Syntax * syn match ExtraWhite /\s\+$/
+autocmd colorscheme * highlight ExtraWhite ctermbg=darkred guibg=lightred
+set mouse=a
+set laststatus=2
